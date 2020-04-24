@@ -107,20 +107,26 @@ export default {
       return {
         swiperOptions: {
           effect: 'coverflow',
-          grabCursor: true,
-          spaceBetween: 30,
-          slidesPerView: '3',
           centeredSlides: true,
+          slidesPerView: 'auto',
           coverflowEffect: {
-            slideShadows: false,
-            rotate: 10,
-            stretch: 0,
-            depth: 200,
-            modifier: 1,
+            slideShadows: true,
+            rotate: 0,
+            stretch: -30,
+            depth: 100,
+            modifier: 3,
           },
 
+
+             renderBullet: function (index, className) {
+               let menu = ['1', '2', '3', '4', '5']
+            return '<span class="' + className + '">' + (menu[index]) + '</span>';
+        },
+
           pagination: {
-            el: '.swiper-pagination'
+            el: '.swiper-pagination',
+            type: 'fraction',
+            clickable: "true",
           },
           // Some Swiper option/callback...
         }
@@ -154,12 +160,12 @@ export default {
   height: 100%;
   background-color: #F9F9F9;
 
-
 }
-
 
 .service-title{
   font-size: 6rem;
+  width: 100%;
+  padding-left: 10%;
 }
 
 .swiper-container{
@@ -175,6 +181,12 @@ export default {
   max-width: 100vw;
   margin: auto;
 
+}
+
+
+.swiper-container-3d .swiper-slide-shadow-left, 
+.swiper-container-3d .swiper-slide-shadow-right{
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.205))
 }
 
 .service-item{
@@ -207,8 +219,8 @@ export default {
 
 .service-item_text{
   font-size: 1.3rem;
-  padding-top: 15px;
   padding-left: 15px;
+  width: 90%;
 }
 
 .service-item_price-list{
