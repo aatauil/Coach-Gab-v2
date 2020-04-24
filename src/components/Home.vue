@@ -39,7 +39,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+@import '../scss/variables.scss';
 
 .copyright{
     position: absolute;
@@ -49,7 +51,7 @@ export default {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: rgba(255, 255, 255, 0.445);
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 
 .home-wrapper{
@@ -69,7 +71,7 @@ export default {
 
 .container-1{
     position: relative;
-    background-color: #B80000;
+    background-color: $color-red;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -80,13 +82,13 @@ export default {
     width: auto;
     text-align: left;
     color: white;
-    font-size: 6rem;
+    font-size: 7.5rem;
     margin-left: 10%;
     line-height: 90%;
 }
 
 .color-black{
-    color: #111;
+    color: $color-dark;
 }
 
 .sub-title{
@@ -94,7 +96,7 @@ export default {
     position: absolute;
     top: 0;
     color: rgba(255, 255, 255, 0.459);
-    font-size: 1rem;
+    font-size: 1.6rem;
     width: 100%;
 }
 
@@ -116,7 +118,7 @@ export default {
     text-align:left;
     color: white;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 .booking-btn::after{
@@ -149,12 +151,12 @@ export default {
     position: absolute;
     display: flex;
     right: 0px;
-    background-color: #111;
+    background-color: $color-dark;
     align-items: center;
     border: none;
     color: white;
     padding: 20px 10%;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 700;
     z-index: 100;
 }
@@ -167,7 +169,7 @@ export default {
     transform:translateY(-10%);
     transform:rotate(180deg);
     background-image: url("../assets/icons/arrow-left.svg");
-    filter: invert();
+    filter: invert(100);
     background-size: 15px 15px;
     background-position: center;
     background-repeat: no-repeat;
@@ -179,7 +181,7 @@ export default {
 .quote{
     margin: 5px;
     margin-top: 15%;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-left: 10%;
     opacity: .1;
@@ -206,14 +208,15 @@ export default {
 }
 
 .info-param{
-    font-size: .8rem;
+    font-size: 1.5rem;
     text-align: left;
     font-weight: 700;
     color: rgba(17, 17, 17, 0.507);
 }
 
 .info-element{
-    color: black;
+    font-size: 1.5rem;
+    color: $color-dark;
     font-weight: 700;
 
 }
