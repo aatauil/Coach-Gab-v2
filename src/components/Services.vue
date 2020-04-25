@@ -1,12 +1,14 @@
 <template>
   <section class="service-container">
     <h1 class="service-title">Services<span class="red-text">.</span></h1>
+    <img class="grid-dots_1" src="../assets/icons/grid-dots1.svg" alt="grid dots">
+    <img class="grid-dots_2" src="../assets/icons/grid-dots2.svg" alt="grid dots">
       <swiper ref="mySwiper" :options="swiperOptions">
         <!-- Slide 1 -->
         <swiper-slide class="service-item">
           <div class="service-item_info">
             <h2 class="service-item_title"><span class="red-text">Home</span> Personal Training</h2>
-            <p class="service-item_text">1 on 1 or small group training. Professionalbody transformation service at your place for you and your family with miniam equipment.</p>
+            <p class="service-item_text">1 on 1 or small group training. Professional body transformation service at your place for you and your family with miniam equipment.</p>
           </div>
           <div class="service-item_price-list">
             <div class="price-list_item">
@@ -23,8 +25,8 @@
         <!-- Slide 2 -->
          <swiper-slide class="service-item">
           <div class="service-item_info">
-            <h2 class="service-item_title"><span class="red-text">Home</span> Personal Training</h2>
-            <p class="service-item_text">1 on 1 or small group training. Professionalbody transformation service at your place for you and your family with miniam equipment.</p>
+            <h2 class="service-item_title"><span class="red-text">1 on 1</span> Personal Training</h2>
+            <p class="service-item_text">Private coaching sessions following specific designed programs to meet your desired goals.</p>
           </div>
           <div class="service-item_price-list">
             <div class="price-list_item">
@@ -81,7 +83,7 @@
          <swiper-slide class="service-item">
           <div class="service-item_info">
             <h2 class="service-item_title"><span class="red-text">Consultation</span> + Training Program</h2>
-            <p class="service-item_text">1 on 1 or small group boxing training. Save precious time and have a professional body transformation service at your place for you and your family.</p>
+            <p class="service-item_text">Consultation + 6 week training program tailored to your goals.</p>
           </div>
           <div class="service-item_price-list price-list">
             <div class="price-list_item">
@@ -109,6 +111,7 @@ export default {
           effect: 'coverflow',
           centeredSlides: true,
           slidesPerView: 'auto',
+          grabCursor: true,
           coverflowEffect: {
             slideShadows: true,
             rotate: 0,
@@ -118,15 +121,15 @@ export default {
           },
 
 
-             renderBullet: function (index, className) {
-               let menu = ['1', '2', '3', '4', '5']
-            return '<span class="' + className + '">' + (menu[index]) + '</span>';
-        },
 
           pagination: {
             el: '.swiper-pagination',
-            type: 'fraction',
+            type: 'bullets',
             clickable: "true",
+                renderBullet: function (index, className) {
+                  let menu = ['1', '2', '3', '4', '5']
+                return `<span class="${className} bullet-${index}"> ${menu[index]} </span>`;
+            },
           },
           // Some Swiper option/callback...
         }
@@ -158,13 +161,13 @@ export default {
   width: 100%;
   margin: auto;
   height: 100%;
-  background-color: #F9F9F9;
+  background-color: rgb(238, 238, 238);
 
 }
 
 .service-title{
   font-size: 6rem;
-  width: 100%;
+  width: 90%;
   padding-left: 10%;
 }
 
@@ -180,25 +183,29 @@ export default {
 .swiper-wrapper{
   max-width: 100vw;
   margin: auto;
+  margin-top: 50px;
 
 }
 
 
 .swiper-container-3d .swiper-slide-shadow-left, 
 .swiper-container-3d .swiper-slide-shadow-right{
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.205))
+  background-image: linear-gradient(to left, rgba(0, 0, 0, .15), rgba(0, 0, 0, 0.15))
 }
 
 .service-item{
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
   height: 65%;
   padding: 5px;
-  width: 300px;
+  width: 320px;
   max-width: 350px;
+  box-shadow: 0px 0px 30px rgba(128, 128, 128, 0.103);
 }
+
 
 .service-item_decoration{
   position: absolute;
@@ -209,8 +216,8 @@ export default {
   opacity: .05;
   transform: translateY(-50%);
 
-
 }
+
 
 .service-item_title{
   padding: 20px 15px;
@@ -256,6 +263,80 @@ export default {
 
 .red-text{
   color: $color-red;
+}
+
+//PAGINATION 
+.swiper-pagination{
+  margin-bottom: 50px;
+   &:before{
+    content: "";
+    top: 60%;
+    left: 10vw;
+    position: absolute;
+    width: 20vw;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.096);
+  }
+
+    &:after{
+    content: "";
+    top: 60%;
+    right: 10vw;
+    position: absolute;
+    width: 20vw;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.096);
+  }
+   
+}
+.swiper-pagination-bullet{
+  position: relative;
+  opacity: .8;
+  color: black;
+  width: 20px;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  background: none;
+
+
+}
+
+
+.swiper-pagination-bullet-active{
+  position: relative;
+  font-size: 4rem;
+  line-height: 100%;
+  transform: translateY(-10px);
+  text-align: center;
+  transition: all .2s ease;
+  &::after{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(90%);
+    left: 0;
+    content: "";
+    width: 110%;
+    height: 10px;
+    border-radius: 2px;
+    background-color: $color-red;
+  }
+}
+
+// Decoration
+
+.grid-dots_1{
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100px;
+}
+
+.grid-dots_2{
+  position: absolute;
+  right: 10px;
+  bottom: 8%;
+  width: 100px;
 }
 
 </style>
