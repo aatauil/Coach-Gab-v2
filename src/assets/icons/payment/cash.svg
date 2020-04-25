@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="45" viewBox="0 0 130 45">
+  <g id="Group_47" data-name="Group 47" transform="translate(-6568 -411)">
+    <g id="Rectangle_98" data-name="Rectangle 98" transform="translate(6568 411)" fill="#fff" stroke="#000" stroke-width="2">
+      <rect width="130" height="45" rx="5" stroke="none"/>
+      <rect x="1" y="1" width="128" height="43" rx="4" fill="none"/>
+    </g>
+    <text id="Cash" transform="translate(6604 441)" font-size="20" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">Cash</tspan></text>
+  </g>
+</svg>

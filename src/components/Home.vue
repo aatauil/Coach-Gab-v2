@@ -1,5 +1,8 @@
 <template>
     <div class="home-wrapper">
+         <img class="home-dots_1" src="../assets/icons/decoration/grid-dots1.svg" alt="dots">
+         <img class="home-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
+        <router-link class="next-button" to="/Services">Services</router-link>
         <div class="copyright">©Copyright 2020 • Gabriel</div>
         <div class="container container-1">
             <p class="sub-title">National Academy Sports Medicine - Certified Personal Trainer!</p>
@@ -11,7 +14,7 @@
             <img class="hero-img" src="../assets/gab-hero-clip.png" alt="Coach ">
         </div>
         <div class="container container-2">
-            <button class="next-button">Services</button>
+
             <p class="quote">"I believe in me, I believe in you. I have faith in what I do. I always do my best!"</p>
             <div class="coach-info">
                 <div class="info-item info-name">
@@ -129,7 +132,7 @@ export default {
     height: 40px;
     transform:translateY(-10%);
     transform:rotate(180deg);
-    background-image: url("../assets/icons/arrow-left.svg");
+    background-image: url("../assets/icons/decoration/arrow-left.svg");
     background-size: 12px 12px;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,14 +154,22 @@ export default {
     position: absolute;
     display: flex;
     right: 0px;
+    top: 0;
     background-color: $color-dark;
     align-items: center;
     border: none;
     color: white;
-    padding: 20px 10%;
+    padding: 20px 5%;
     font-size: 1.6rem;
     font-weight: 700;
     z-index: 100;
+    opacity: .3;
+    transition: opacity .2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+        opacity: 1;
+    }
 }
 
 .next-button::after{
@@ -168,7 +179,7 @@ export default {
     height: 20px;
     transform:translateY(-10%);
     transform:rotate(180deg);
-    background-image: url("../assets/icons/arrow-left.svg");
+    background-image: url("../assets/icons/decoration/arrow-left.svg");
     filter: invert(100);
     background-size: 15px 15px;
     background-position: center;
@@ -179,6 +190,7 @@ export default {
 
 
 .quote{
+    line-height: 150%;
     margin: 5px;
     margin-top: 15%;
     font-size: 4rem;
@@ -195,11 +207,12 @@ export default {
     position: absolute;
     right: 5%;
     bottom: 5%;
+    z-index: 10000;
 }
 
 .info-item{
     display: flex;
-    background-color: rgba(0, 0, 0, 0.041);
+    background-color: rgb(233, 233, 233);
     padding: 20px 30px;
     margin: 5px;
     justify-content: space-between;
@@ -218,6 +231,23 @@ export default {
     font-size: 1.5rem;
     color: $color-dark;
     font-weight: 700;
+
+}
+
+// Decoration 
+
+.home-dots_1{
+    z-index: 1000;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.home-dots_2{
+    z-index: 0;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
 
 }
 

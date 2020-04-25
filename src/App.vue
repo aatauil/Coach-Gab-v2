@@ -13,7 +13,7 @@
 </template>
 
 <script>
-
+//de13451d70a85ba978b65c812e188b2e312ab4ee
 
 export default {
   name: 'MyIndex',
@@ -75,6 +75,7 @@ body{
 }
 
 .nav-item{
+  transition: font-size .3s ease;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -85,13 +86,17 @@ body{
   font-weight: 700;
   opacity: .5;
 
+  &:hover{
+    font-size: 2.2rem;
+  }
+
 }
 
 .active-link{
   font-size: 2.2rem;
   font-weight: 700;
   color: rgb(255, 255, 255);
-  opacity: 1;
+  opacity: 1 !important;
   
 }
 
@@ -108,32 +113,33 @@ body{
   width: 15%;
   background-color: $color-red;
   color: rgb(255, 255, 255);
+  opacity: .8;
 }
 
 // Nav icons
 
 .nav-home::before{
-  content: url('./assets/icons/home-icon-fill.svg');
+  content: url('./assets/icons/navigation/home-icon-fill.svg');
   margin-right: 10px;
 }
 
 .nav-services::before{
-  content: url('./assets/icons/grid-icon-fill.svg');
+  content: url('./assets/icons/navigation/grid-icon-fill.svg');
   margin-right: 10px;
 }
 
 .nav-about::before{
-  content: url('./assets/icons/about-icon-fill.svg');
+  content: url('./assets/icons/navigation/about-icon-fill.svg');
   margin-right: 10px;
 }
 
 .nav-contact::before{
-  content: url('./assets/icons/contact-icon-fill.svg');
+  content: url('./assets/icons/navigation/contact-icon-fill.svg');
   margin-right: 10px;
 }
 
 .nav-booking-info::before{
-  content: url('./assets/icons/booking-info-icon-fill.svg');
+  content: url('./assets/icons/navigation/booking-info-icon-fill.svg');
   margin-right: 10px;
 }
 

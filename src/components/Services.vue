@@ -1,8 +1,9 @@
 <template>
   <section class="service-container">
     <h1 class="service-title">Services<span class="red-text">.</span></h1>
-    <img class="grid-dots_1" src="../assets/icons/grid-dots1.svg" alt="grid dots">
-    <img class="grid-dots_2" src="../assets/icons/grid-dots2.svg" alt="grid dots">
+    <img class="grid-dots_1" src="../assets/icons/decoration/grid-dots1.svg" alt="grid dots">
+    <img class="grid-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="grid dots">
+     <router-link class="next-button" to="/Booking-info">Booking info</router-link>
       <swiper ref="mySwiper" :options="swiperOptions">
         <!-- Slide 1 -->
         <swiper-slide class="service-item">
@@ -111,7 +112,8 @@ export default {
           effect: 'coverflow',
           centeredSlides: true,
           slidesPerView: 'auto',
-          grabCursor: true,
+          slideToClickedSlide: true,
+          initialSlide: 1,
           coverflowEffect: {
             slideShadows: true,
             rotate: 0,
@@ -204,6 +206,11 @@ export default {
   width: 320px;
   max-width: 350px;
   box-shadow: 0px 0px 30px rgba(128, 128, 128, 0.103);
+  cursor: pointer;
+}
+
+.swiper-slide-active{
+  cursor:default;
 }
 
 
@@ -228,6 +235,7 @@ export default {
   font-size: 1.3rem;
   padding-left: 15px;
   width: 90%;
+  line-height: 150%;
 }
 
 .service-item_price-list{
@@ -338,5 +346,10 @@ export default {
   bottom: 8%;
   width: 100px;
 }
+
+// next button
+
+
+
 
 </style>
