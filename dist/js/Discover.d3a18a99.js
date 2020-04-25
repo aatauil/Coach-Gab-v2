@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["Discover"],{"26ad":function(e,n,s){"use strict";s.r(n);var t=function(){var e=this,n=e.$createElement,s=e._self._c||n;return s("swiper-slide",[e._v("Booking")])},i=[],l={},o=l,r=s("2877"),c=Object(r["a"])(o,t,i,!1,null,null,null);n["default"]=c.exports}}]);
+//# sourceMappingURL=Discover.d3a18a99.js.map
