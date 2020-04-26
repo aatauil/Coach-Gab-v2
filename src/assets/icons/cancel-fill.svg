@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63.464" height="59.621" viewBox="0 0 63.464 59.621">
+  <g id="Group_51" data-name="Group 51" transform="translate(-175.268 -555.689)">
+    <g id="booking-fill" transform="translate(175.268 540.189)">
+      <path id="Path_7" data-name="Path 7" d="M50.413,15.5H13.051a13.051,13.051,0,0,0-.078,26.1h5.862V31.376a8.314,8.314,0,0,1,8.3-8.3h.018a8.318,8.318,0,0,1,8.287,8.3V41.6H50.413a13.051,13.051,0,0,0,0-26.1Z" transform="translate(0)" fill="#b80000"/>
+      <path id="Path_8" data-name="Path 8" d="M119.643,126.625l-11.969-1.244V111.167a4.586,4.586,0,0,0-9.173,0v23.789h-.042l-4.527-3.781a4.411,4.411,0,1,0-5.654,6.773l9.189,7.668h27.063V132.16A5.578,5.578,0,0,0,119.643,126.625Z" transform="translate(-75.948 -79.791)" fill="#b80000"/>
+      <path id="Path_9" data-name="Path 9" d="M181.95,455.219a1.859,1.859,0,0,0,1.859,1.859h22.312a1.859,1.859,0,0,0,1.859-1.859V451.5H181.95Z" transform="translate(-159.397 -381.957)" fill="#b80000"/>
+    </g>
+    <line id="Line_14" data-name="Line 14" x2="9" y2="9" transform="translate(220.5 564.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    <line id="Line_15" data-name="Line 15" x1="9" y2="9" transform="translate(220.5 564.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+  </g>
+</svg>

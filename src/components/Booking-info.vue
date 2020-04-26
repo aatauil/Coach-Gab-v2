@@ -27,22 +27,22 @@
            <img class="ibooking-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
            <swiper ref="mySwiper" :options="swiperOptions">
                 <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/payment/bancontact.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/appointment.svg" alt="">
                     <h3 class="ibooking-item_title">Book and Pay <span class="red-text">Online!</span></h3>
                     <p class="ibooking-item_text">Easily book and pay online! 5 minutes is all you need. We provide many payement methodes and even the possibility to pay cash. Book now!</p>
                 </swiper-slide>
                  <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/payment/bancontact.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/notification-fill.svg" alt="">
                     <h3 class="ibooking-item_title">E-mail Reminder </h3>
                     <p class="ibooking-item_text">Get an E-mail reminder <b>2 hours</b>  in advance. This way you will never miss a workout. Rather get a text message? No problem we got you covered!</p>
                 </swiper-slide>
                  <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/payment/bancontact.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/list.svg" alt="">
                     <h3 class="ibooking-item_title">Multi-Session <span class="red-text">Pass </span></h3>
                     <p class="ibooking-item_text">Buy 10 sessions for a lower price. Book whenever you want and for as long as you need. The pass stays valid for <b>1 year</b> . Easily track how many sessions you have left with our user dashboard. </p>
                 </swiper-slide>
                  <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/payment/bancontact.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="">
                     <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
                     <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
                 </swiper-slide>
@@ -227,7 +227,8 @@ export default {
 }
 
 .ibooking-item_icon{
-    width: 80px;
+    height: 50px;
+    padding: 5px;
 }
 
 .ibooking-item_title{
