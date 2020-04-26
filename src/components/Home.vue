@@ -15,7 +15,7 @@
         </div>
         <div class="container container-2">
 
-            <p class="quote">"I believe in me, I believe in you. I have faith in what I do. I always do my best!"</p>
+            <p class="quote"><span class="quote-tag">"</span>I believe in me, I believe in you. I have faith in what I do. I always do my best!<span class="quote-tag">"</span></p>
             <div class="coach-info">
                 <div class="info-item info-name">
                     <div class="info-param">Name</div>
@@ -190,15 +190,43 @@ export default {
 
 
 .quote{
+    transition: all 2s ease;
     line-height: 150%;
-    margin: 5px;
-    margin-top: 15%;
+    width: 90%;
     font-size: 4rem;
     font-weight: 700;
-    margin-left: 10%;
-    opacity: .1;
-    text-align: right;
+    margin: auto;
+    margin-top: 20rem;
+    text-align: center;
+    color: rgba(128, 128, 128, 0.137);
+    // &> span{
+    //     color: $color-red;
+    //     transform: all 1s ease;
+    //     opacity: .2;
+    // }
+    &:hover {
+        color: white;
+       text-shadow:
+       0px 0px 0 rgb(221,221,221),
+       .1rem .1rem 0 rgb(204,204,204),
+       .2rem .2rem 0 rgb(188,188,188),
+       .3rem .3rem 0 rgb(172,172,172),
+       .4rem .4rem 0 rgb(156,156,156),
+       .5rem .5rem 0 rgb(139,139,139),
+       .6rem .6rem 0 rgb(123,123,123),
+       .7rem .7rem 0 rgb(107,107,107),
+       .8rem .8rem 7rem rgba(0,0,0,1),
+       .8rem .8rem 1rem rgba(0,0,0,0.5),
+       0rem 0px .7rem rgba(0,0,0,.2);
+
+    //    &>span{
+    //        color: $color-red;
+    //        opacity: 1;
+    //    }
+    }
+
 }
+
 
 .coach-info{
     display: flex;
@@ -212,7 +240,7 @@ export default {
 
 .info-item{
     display: flex;
-    background-color: rgb(233, 233, 233);
+    background-color: #EDEDED;
     padding: 20px 30px;
     margin: 5px;
     justify-content: space-between;

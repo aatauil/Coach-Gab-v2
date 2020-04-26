@@ -191,7 +191,6 @@ export default {
     opacity: .8;
     position: absolute;
     bottom: 5px;
-    padding-left: 4vw;
     display: flex;
     align-items: center;
     &::before{

@@ -6,6 +6,7 @@ Vue.use(Router)
 
 export default new Router({
     linkExactActiveClass: "active-link",
+    mode: "history",
     routes:[
         {
             path: "/",
@@ -15,27 +16,27 @@ export default new Router({
         {
             path: "/Services",
             name: "Services",
-            component: () => import(/* webpackChunkName: "Hire" */ "./components/Services.vue")
+            component: () => import(/* webpackChunkName: "Service" */ "./components/Services.vue")
         },
         {
             path: "/Booking-info",
             name: "Bookinf-info",
-            component: () => import(/* webpackChunkName: "Hire" */ "./components/Booking-info.vue")
+            component: () => import(/* webpackChunkName: "Booking-info" */ "./components/Booking-info.vue")
         },
         {
             path: "/About",
             name: "About",
-            component: () => import(/* webpackChunkName: "Menu" */ "./components/About.vue")
+            component: () => import(/* webpackChunkName: "About" */ "./components/About.vue")
         },
         {
             path: "/Contact",
             name: "Contact",
-            component: () => import(/* webpackChunkName: "Menu" */ "./components/Contact.vue")
+            component: () => import(/* webpackChunkName: "Contact" */ "./components/Contact.vue")
         },
         {
             path: "/Booking",
             name: "Booking",
-            component: () => import(/* webpackChunkName: "Discover" */ "./components/Booking.vue")
+            component: () => import(/* webpackChunkName: "Booking" */ "./components/Booking.vue")
         },
     ]
 })
