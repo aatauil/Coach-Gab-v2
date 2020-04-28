@@ -10,17 +10,17 @@
         <article class="ibooking-pay">
             <h2 class="ibooking-pay_title">Payement Methodes</h2>
             <div class="ibooking-pay_list">
-                <img class="payement-icon" src="../assets/icons/payment/bancontact.svg" alt="Bancontact icon">
-                <img class="payement-icon" src="../assets/icons/payment/applepay.svg" alt="ApplePay icon">
-                <img class="payement-icon" src="../assets/icons/payment/belfius.svg" alt="Belfius icon">
-                <img class="payement-icon" src="../assets/icons/payment/inghomepay.svg" alt="Ing icon">
-                <img class="payement-icon" src="../assets/icons/payment/kbc.svg" alt="Kbc icon">
-                <img class="payement-icon" src="../assets/icons/payment/maestro.svg" alt="Maestro icon">
-                <img class="payement-icon" src="../assets/icons/payment/mastercard.svg" alt="Mastercard icon">
-                <img class="payement-icon" src="../assets/icons/payment/paypal.svg" alt="Paypal icon">
-                <img class="payement-icon" src="../assets/icons/payment/paysafecard.svg" alt="Paysafecard icon">
-                <img class="payement-icon" src="../assets/icons/payment/visa.svg" alt="Visa icon">
-                <img class="payement-icon" src="../assets/icons/payment/cash.svg" alt="Cash icon">
+                
+                <div class="tooltip"><img class="payement-icon bancontact-icon"  src="../assets/icons/payment/bancontact.svg" alt="Bancontact icon"><span class="tooltiptext">Bancontact</span></div>
+                <div class="tooltip"><img class="payement-icon apple-icon" src="../assets/icons/payment/applepay.svg" alt="ApplePay icon"><span class="tooltiptext">ApplePay</span></div>
+                <div class="tooltip"><img class="payement-icon belfius-icon" src="../assets/icons/payment/belfius.svg" alt="Belfius icon"><span class="tooltiptext">Belfius</span></div>
+                <div class="tooltip"><img class="payement-icon ing-icon" src="../assets/icons/payment/inghomepay.svg" alt="Ing icon"><span class="tooltiptext">ING</span></div>
+                <div class="tooltip"><img class="payement-icon kbc-icon" src="../assets/icons/payment/kbc.svg" alt="Kbc icon"><span class="tooltiptext">KBC</span></div>
+                <div class="tooltip"><img class="payement-icon maestro-icon" src="../assets/icons/payment/maestro.svg" alt="Maestro icon"><span class="tooltiptext">Maestro</span></div>
+                <div class="tooltip"><img class="payement-icon mastercard-icon" src="../assets/icons/payment/mastercard.svg" alt="Mastercard icon"><span class="tooltiptext">Mastercard</span></div>
+                <div class="tooltip"><img class="payement-icon paypal-icon" src="../assets/icons/payment/paypal.svg" alt="Paypal icon"><span class="tooltiptext">Paypal</span></div>
+                <div class="tooltip"><img class="payement-icon visa-icon" src="../assets/icons/payment/visa.svg" alt="Visa icon"><span class="tooltiptext">Visa</span></div>
+                <div class="tooltip"><img class="payement-icon cash-icon" src="../assets/icons/payment/cash.svg" alt="Cash icon"><span class="tooltiptext">Cash</span></div>
             </div>
             <p class="secure-payement">All our payement methodes are secured by • <a class="mollie" href="https://www.mollie.com/features/security">Mollie</a>•</p>
         </article>
@@ -29,17 +29,17 @@
            <img class="ibooking-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
            <swiper ref="mySwiper" :options="swiperOptions">
                 <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/appointment.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/appointment.svg" alt="appointment icon">
                     <h3 class="ibooking-item_title">Book and Pay <span class="red-text">Online!</span></h3>
                     <p class="ibooking-item_text">Easily book and pay online! 5 minutes is all you need. We provide many payement methodes and even the possibility to pay cash. Book now!</p>
                 </swiper-slide>
                  <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/notification-fill.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/notification-fill.svg" alt="notification icon">
                     <h3 class="ibooking-item_title">E-mail Reminder </h3>
                     <p class="ibooking-item_text">Get an E-mail reminder <b>2 hours</b>  in advance. This way you will never miss a workout. Rather get a text message? No problem we got you covered!</p>
                 </swiper-slide>
                  <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/list.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/list.svg" alt="list icon">
                     <h3 class="ibooking-item_title">Multi-Session <span class="red-text">Pass </span></h3>
                     <p class="ibooking-item_text">Buy 10 sessions for a lower price. Book whenever you want and for as long as you need. The pass stays valid for <b>1 year</b> . Easily track how many sessions you have left with our user dashboard. </p>
                 </swiper-slide>
@@ -49,14 +49,14 @@
                     <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
                 </swiper-slide>
                   <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="">
+                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="cancel icon">
                     <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
                     <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
                 </swiper-slide>
                   <swiper-slide class="ibooking-item">
-                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="">
-                    <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
-                    <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
+                    <img class="ibooking-item_icon" src="../assets/icons/cash.svg" alt="cash icon">
+                    <h3 class="ibooking-item_title"><span class="red-text">Cash  </span>Payement Possible </h3>
+                    <p class="ibooking-item_text">When booking choose the cash option. This will skip the online payement. On the day of the session be sure to paye the coach <b>before</b> the session starts.</p>
                 </swiper-slide>
                 
            </swiper>
@@ -194,12 +194,14 @@ export default {
 }
 
 .payement-icon{
+    position: relative;
     width: 60px;
     margin-right: 10px;
     margin-bottom: 10px;
+
 }
 
-.payement-icon:last-child{
+.cash-icon{
     width: auto;
 }
 
@@ -286,6 +288,33 @@ export default {
         opacity: 1;
     }
 }
+// Tooltip 
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size: 1.5rem;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: -80%;
+  left: 0;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 // Decoration
 
@@ -303,6 +332,15 @@ export default {
     top: 0;
     right: 0;
     opacity: .2;
+
+}
+
+.bancontact-icon::after{
+    content: "Bancontact";
+    position: absolute;
+    background-color: white;
+    padding: 10px 20px;
+
 
 }
 
