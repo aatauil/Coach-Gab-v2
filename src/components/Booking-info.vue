@@ -1,6 +1,7 @@
 <template>
   <section class="ibooking-container">
       <img class="ibooking-dots_1" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
+      <a href="#" class="next-button" >Booking now</a>
       <div class="ibooking-top">
         <article class="ibooking-header">
             <h1 class="ibooking-header_title">Booking<span class="red-text">.</span></h1>
@@ -13,6 +14,7 @@
                 <img class="payement-icon" src="../assets/icons/payment/applepay.svg" alt="ApplePay icon">
                 <img class="payement-icon" src="../assets/icons/payment/belfius.svg" alt="Belfius icon">
                 <img class="payement-icon" src="../assets/icons/payment/inghomepay.svg" alt="Ing icon">
+                <img class="payement-icon" src="../assets/icons/payment/kbc.svg" alt="Kbc icon">
                 <img class="payement-icon" src="../assets/icons/payment/maestro.svg" alt="Maestro icon">
                 <img class="payement-icon" src="../assets/icons/payment/mastercard.svg" alt="Mastercard icon">
                 <img class="payement-icon" src="../assets/icons/payment/paypal.svg" alt="Paypal icon">
@@ -46,6 +48,16 @@
                     <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
                     <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
                 </swiper-slide>
+                  <swiper-slide class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="">
+                    <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
+                    <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
+                </swiper-slide>
+                  <swiper-slide class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="">
+                    <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
+                    <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
+                </swiper-slide>
                 
            </swiper>
            
@@ -74,10 +86,18 @@ export default {
   data() {
       return {
         swiperOptions: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 30,
-            virtualTranslate: true,
-          // Some Swiper option/callback...
+            loop: true,
+            grabCursor: true,
+            speed: 5000,
+            
+        // AutoPlay
+            autoplay: {
+                delay: 0,
+
+            }
+
         }
       }
     },
@@ -137,9 +157,6 @@ export default {
     margin: 3rem 0;
 }
 
-.red-text{
-    color: $color-red;
-}
 
 
 .ibooking-header_text{
@@ -219,6 +236,7 @@ export default {
     box-sizing: border-box;
     box-shadow: 0px 0px 20px rgb(223, 223, 223);
     height: 65%;
+    min-width: 300px;
     padding: 20px;
     background-color: white;
      &:hover{

@@ -33,10 +33,6 @@ export default new Router({
             name: "Contact",
             component: () => import(/* webpackChunkName: "Contact" */ "./components/Contact.vue")
         },
-        {
-            path: "/Booking",
-            name: "Booking",
-            component: () => import(/* webpackChunkName: "Booking" */ "./components/Booking.vue")
-        },
+
     ]
 })

@@ -7,7 +7,7 @@
       <router-link class="nav-item nav-booking-info" to="/Booking-info">Booking Info</router-link>
       <!-- <router-link class="nav-item nav-about" to="/About">About</router-link> -->
       <router-link class="nav-item nav-contact" to="/Contact">Contact</router-link>
-      <router-link class="nav-item nav-booking" to="/Booking">Booking</router-link>
+      <a href="#" class="nav-item nav-booking">Booking</a>
     </nav> 
   </div>
 </template>
