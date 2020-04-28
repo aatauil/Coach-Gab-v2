@@ -3,8 +3,11 @@
         <h1 class="contact-title">Contact<span class="red-text">.</span></h1>
         <img class="grid-dots_1" src="../assets/icons/decoration/grid-dots1.svg" alt="grid dots">
         <img class="grid-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="grid dots">
-         <a href="#" class="next-button" >Booking now</a>
-        <form class="contact-form" action="">
+         <a href="#" class="next-button" >Booking</a>
+        <form class="contact-form" name="contact" netlify netlify-honeypot="bot-field">
+            <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+             </p>
             <div class="contact-form_left">
                 <p class="form-name form-item">
                     <label class="form-label" for="name">Name<span class="red-text">*</span> </label>
@@ -66,6 +69,10 @@ export default {
 <style lang="scss">
 
 @import "../scss/variables.scss";
+
+.hidden{
+    display: none;
+}
 
 
 .contact-container{

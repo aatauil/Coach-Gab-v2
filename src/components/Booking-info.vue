@@ -1,7 +1,7 @@
 <template>
   <section class="ibooking-container">
       <img class="ibooking-dots_1" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
-      <a href="#" class="next-button" >Booking now</a>
+      <a href="#" class="next-button" >Booking</a>
       <div class="ibooking-top">
         <article class="ibooking-header">
             <h1 class="ibooking-header_title">Booking<span class="red-text">.</span></h1>
