@@ -193,6 +193,10 @@ export default {
   font-size: 6rem;
   width: 90%;
   padding-left: 10%;
+
+    @include breakpoint(height-sm){
+  margin-bottom: 0;
+  }
 }
 
 .swiper-container{
@@ -229,6 +233,10 @@ export default {
   max-width: 350px;
   box-shadow: 0px 0px 30px rgba(128, 128, 128, 0.103);
   cursor: pointer;
+
+      @include breakpoint(height-sm){
+      height: 80%;
+      }
 
   
 }
@@ -330,9 +338,9 @@ export default {
     background-color: rgba(0, 0, 0, 0.096);
   }
 
-    @include breakpoint(phone){
-    display: none;
-}
+      @include breakpoint(height-sm){
+      display: none;
+      }
    
 }
 .swiper-pagination-bullet{

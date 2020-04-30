@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      navOpen: true
+      navOpen: false
     }
   },
 
@@ -95,6 +95,7 @@ export default {
   flex-direction: column;
   padding: 50px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .mobile-nav-item{
