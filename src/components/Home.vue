@@ -45,6 +45,7 @@ export default {
 <style lang="scss">
 
 @import '../scss/variables.scss';
+@import '../scss/mixins.scss';
 
 .copyright{
     position: absolute;
@@ -70,6 +71,9 @@ export default {
 .container{
     width: 50%;
     height: 100%;
+    @include breakpoint(tablet-md){
+    width: 100%;
+  }
 }
 
 .container-1{
@@ -109,6 +113,10 @@ export default {
 
 .container-2{
     position: relative;
+    @include breakpoint(tablet-md){
+    display: none;
+  }
+    
 }
 .booking-btn{
     display: flex;
@@ -116,7 +124,7 @@ export default {
     background-color: rgba(255, 255, 255, 0);
     border: none;
     justify-content: center;
-    width: 200px;
+    width: auto;
     margin-left: 10%;
     text-align:left;
     color: white;
@@ -146,7 +154,24 @@ export default {
     transform: translateY(10px);
     bottom: 0px;
     margin-left: 60px;
-    display: flex;
+    @include breakpoint(tablet-md){
+    right: 0;
+    }
+
+      @include breakpoint(phone-xs){
+    display: none;
+    }
+
+  
+}
+
+.hero-img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    @include breakpoint(tablet-md){
+    width: 40vh;
+  }
 }
 
 
@@ -170,6 +195,10 @@ export default {
     &:hover{
         opacity: 1;
     }
+    @include breakpoint(tablet-sm){
+    opacity: 1;
+    padding: 10px 5%;
+  }
 }
 
 .next-button::after{
@@ -265,10 +294,15 @@ export default {
 // Decoration 
 
 .home-dots_1{
-    z-index: 1000;
+    z-index: 1;
     position: absolute;
     top: 30px;
     left: 0;
+
+    @include breakpoint(tablet-sm){
+    height: 50%;
+  }
+
 }
 
 .home-dots_2{

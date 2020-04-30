@@ -1,0 +1,30 @@
+
+@mixin breakpoint($class) {
+
+
+  // Width
+
+    @if $class == phone-xs {
+      @media (max-width: 300px) { @content; }
+    }
+
+    @if $class == phone {
+      @media (max-width: 400px) { @content; }
+    }
+   
+    @else if $class == tablet-sm {
+      @media (max-width: 768px) { @content; }
+    }
+   
+    @else if $class == tablet-md {
+      @media (max-width: 992px) { @content; }
+    }
+   
+    @else if $class == desktop {
+      @media (min-width: 1200px) { @content; }
+    }
+   
+    @else {
+      @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+  }

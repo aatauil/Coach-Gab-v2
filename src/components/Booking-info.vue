@@ -90,11 +90,13 @@ export default {
             spaceBetween: 30,
             loop: true,
             grabCursor: true,
-            speed: 5000,
+            speed: 9000,
+            freeMode:true,
+            freeModeMomentumRatio: 10,
             
         // AutoPlay
             autoplay: {
-                delay: 0,
+                delay: 1,
 
             }
 
@@ -131,6 +133,9 @@ export default {
     display: flex;
     align-items: center;
     padding: 5px;
+    -webkit-transition-timing-function:linear!important;
+    -o-transition-timing-function:linear!important;
+    transition-timing-function:linear!important;
 }
 
 .ibooking-container{

@@ -93,7 +93,12 @@
           </div>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
+        <div class="navigation-container">
+          
+        </div>
       </swiper>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
   </section>
 </template>
 
@@ -120,6 +125,10 @@ export default {
             stretch: -30,
             depth: 100,
             modifier: 3,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
           },
 
 
@@ -154,6 +163,7 @@ export default {
 <style lang="scss">
 
 @import '../scss/variables.scss';
+@import '../scss/mixins.scss';
 
 .service-container{
   display: flex;
@@ -164,8 +174,20 @@ export default {
   margin: auto;
   height: 100%;
   background-color: rgb(238, 238, 238);
+  position: relative;
 
 }
+
+//swiper-navigation
+
+.swiper-button-next, .swiper-button-prev{
+  display: none;
+  color: black;
+  @include breakpoint(tablet-md){
+  display: block;
+}
+}
+
 
 .service-title{
   font-size: 6rem;
@@ -207,6 +229,8 @@ export default {
   max-width: 350px;
   box-shadow: 0px 0px 30px rgba(128, 128, 128, 0.103);
   cursor: pointer;
+
+  
 }
 
 .swiper-slide-active{
@@ -229,6 +253,9 @@ export default {
 .service-item_title{
   padding: 20px 15px;
   font-size: 2rem;
+    @include breakpoint(tablet-md){
+  font-size: 16px;
+}
 }
 
 .service-item_text{
@@ -236,6 +263,9 @@ export default {
   padding-left: 15px;
   width: 90%;
   line-height: 150%;
+      @include breakpoint(tablet-md){
+  font-size: 12px;
+}
 }
 
 .service-item_price-list{
@@ -255,6 +285,10 @@ export default {
   font-size: 1.2rem;
   &:last-child{
     margin-bottom: 20px;
+  }
+
+  @include breakpoint(tablet-md){
+    font-size: 12px;
   }
 }
 
@@ -295,6 +329,10 @@ export default {
     height: 2px;
     background-color: rgba(0, 0, 0, 0.096);
   }
+
+    @include breakpoint(phone){
+    display: none;
+}
    
 }
 .swiper-pagination-bullet{

@@ -199,7 +199,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.418);
     border-radius: 10px;
@@ -213,10 +213,10 @@ textarea {
 }
 
 .form-checkbox{
-    height: 2rem;
-    width: 2rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50px;
-    border: 1px solid $color-red;
+    border: 3px solid $color-red;
 }
 
 .privacy-checkbox{
@@ -231,7 +231,7 @@ textarea {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 5px;
-    
+    padding: 3rem 10px;
 }
 
 .form-submit{
