@@ -175,6 +175,7 @@ export default {
   height: 100%;
   background-color: rgb(238, 238, 238);
   position: relative;
+  min-height: 600px;
 
 }
 
@@ -206,6 +207,9 @@ export default {
   flex: 1;
   width: 100%;
   overflow: hidden;
+  min-height: 500px;
+
+  
 }
 
 .swiper-wrapper{
@@ -235,7 +239,7 @@ export default {
   cursor: pointer;
 
       @include breakpoint(height-sm){
-      height: 80%;
+      min-height: 400px
       }
 
   

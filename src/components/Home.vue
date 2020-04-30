@@ -92,6 +92,7 @@ export default {
     font-size: 7.5rem;
     margin-left: 10%;
     line-height: 90%;
+    z-index: 1;
 }
 
 .color-black{
@@ -130,6 +131,7 @@ export default {
     color: white;
     font-weight: 700;
     font-size: 1.8rem;
+    z-index: 1;
 }
 
 .booking-btn::after{

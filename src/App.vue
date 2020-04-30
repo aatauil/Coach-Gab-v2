@@ -27,8 +27,8 @@ export default {
 
 html{
   font-size: 62.5%;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   
 
 
@@ -48,12 +48,18 @@ body{
 
 .router-view-container{
   height: 100%;
+  flex: 1;
 }
 
 .main-container{
   display: flex;
   flex-direction: column;
   height: 100vh;
+    @include breakpoint(tablet-sm){
+    width: auto;
+  }
+  
+  
 
 }
 
@@ -63,6 +69,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $color-dark;
+
 }
 
 

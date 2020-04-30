@@ -64,7 +64,7 @@
       </div>
      
       <div class="ibooking-bottom">
-          <div class="ibboking-bottom_inner">
+          <div class="ibooking-bottom_inner">
           <a class="misc-item" href="#">Terms And Conditions</a>
           <a class="misc-item" href="#">Refund Policy</a>
           <a class="misc-item" href="#">Cookie Policy</a>
@@ -120,6 +120,7 @@ export default {
 
 <style lang="scss">
 @import '../scss/variables.scss';
+@import '../scss/mixins.scss';
 
 .ibooking-middle >.swiper-container{
     height: 100%;
@@ -141,12 +142,25 @@ export default {
 .ibooking-container{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    @include breakpoint(tablet-sm){
+    height: auto;
+    
+  }
+
 }
 
 .ibooking-top{
     display: flex;
     width: 100%;
     height: 40%;
+    
+    
+  @include breakpoint(tablet-sm){
+    flex-direction: column;
+    height: auto;
+  }
+  
 }
 
 .ibooking-header{
@@ -155,6 +169,10 @@ export default {
     background-color: #1E1E1E;
     padding-top: 20px;
     padding-left: 4vw;
+      @include breakpoint(tablet-sm){
+    width: auto;
+    padding-bottom: 20px;
+  }
 }
 
 .ibooking-header_title{
@@ -187,6 +205,13 @@ export default {
     position: relative;
     flex: 1;
     background-color: #EFEFEF;
+
+      @include breakpoint(tablet-sm){
+    padding-bottom: 30px;
+  }
+  
+
+  
 }
 
 .ibooking-pay_title{
@@ -196,6 +221,11 @@ export default {
 
 .ibooking-pay_list{
     width: 70%;
+
+      @include breakpoint(tablet-sm){
+    width: 90%;
+  }
+  
 }
 
 .payement-icon{
@@ -222,6 +252,9 @@ export default {
         margin-right: 10px;
         opacity: .8;
     }
+    @include breakpoint(phone){
+    font-size: 1.4rem;
+  }
 
 }
 
@@ -235,6 +268,7 @@ export default {
     flex: 1;
     display: flex;
     align-items: center;
+    min-height: 300px;
 }
 
 
@@ -246,6 +280,7 @@ export default {
     min-width: 300px;
     padding: 20px;
     background-color: white;
+    min-height: 250px;
      &:hover{
          box-shadow: 0px 0px 50px rgb(177, 177, 177);
     }
@@ -269,22 +304,27 @@ export default {
 .ibooking-bottom{
 
     width: 100%;
-    height: 5%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+     @include breakpoint(phone){
+    display: none;
+  }
+
 }
 
 .ibooking-bottom_inner{
-    width: 80%;
-    display: flex;
+    padding: 20px;
 }
 
 .misc-item{
     transition: opacity .2s ease;
     text-decoration: none;
     padding: 10px 40px;
+    margin-bottom: 20px;
     background-color: black;
-    opacity: .2;
+    opacity: .4;
     color: white;
     font-weight: 700;
     border-radius: 5px;
@@ -292,6 +332,7 @@ export default {
     &:hover{
         opacity: 1;
     }
+    
 }
 // Tooltip 
 
