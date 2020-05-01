@@ -69,6 +69,7 @@ export default {
 <style lang="scss">
 
 @import "../scss/variables.scss";
+@import "../scss/mixins.scss";
 
 .hidden{
     display: none;
@@ -79,6 +80,10 @@ export default {
     display: flex;
     flex-direction: column;
     background-color: #F9F9F9;
+
+        @include breakpoint(tablet-md){
+   padding-bottom: 20vh;
+  }
 
 }
 
@@ -100,12 +105,19 @@ textarea {
     width: 90%;
     margin: auto;
     max-width: 1300px;
+        @include breakpoint(tablet-md){
+    flex-direction: column;
+  }
 
 
 }
 
 .contact-form_left{
     width: 50%;
+    @include breakpoint(tablet-md){
+    width: 100%;
+    margin-bottom: 2vh;
+  }
 }
 
 
@@ -115,6 +127,9 @@ textarea {
     font-size: 2rem;
     font-weight: 700;
     width: 90%;
+        @include breakpoint(tablet-md){
+    width: 100%;
+  }
 }
 
 
@@ -138,6 +153,9 @@ textarea {
     border-radius: 10px;
     padding-left: 10px;
     height: 10rem;
+        @include breakpoint(tablet-md){
+    padding-left: 0;
+  }
 }
 
 .form-required{
@@ -152,6 +170,10 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+        @include breakpoint(tablet-md){
+    width: 100%;
+
+  }
 }
 
 .contact-urgent{
@@ -163,6 +185,11 @@ textarea {
     border-radius: 10px;
     color: white;
     font-weight: 700;
+            @include breakpoint(tablet-md){
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    order: 3;
+  }
 }
 
 .contact-urgent_text{
@@ -196,26 +223,28 @@ textarea {
 }
 
 .form-privacy{
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.418);
-    border-radius: 10px;
+    justify-content: center;
+    @include breakpoint(tablet-md){
+    margin-bottom: 2vh;
+  }
 }
 
 // checkbox
 
 .checkbox{
-    position: absolute;
+    position: relative;
     opacity: 0;
 }
 
 .form-checkbox{
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50px;
+    position: absolute;
+    left: 10px;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
     border: 3px solid $color-red;
 }
 
@@ -228,10 +257,11 @@ textarea {
 }
 
 .privacy-label{
+    z-index: 10;
     font-size: 1.5rem;
     font-weight: 700;
-    padding: 5px;
-    padding: 3rem 10px;
+    width: 100%;
+    padding: 1rem 0 1rem 4rem;
 }
 
 .form-submit{
@@ -253,6 +283,9 @@ textarea {
   left: 0;
   top: 10%;
   width: 100px;
+          @include breakpoint(tablet-md){
+    z-index: -1;
+  }
 }
 
 .grid-dots_2{
@@ -260,6 +293,9 @@ textarea {
   right: 10px;
   bottom: 8%;
   width: 100px;
+    @include breakpoint(tablet-md){
+    z-index: -1;
+  }
 }
 
 
