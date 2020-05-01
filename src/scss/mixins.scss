@@ -5,7 +5,7 @@
   // Width
 
     @if $class == phone-xs {
-      @media (max-width: 300px) { @content; }
+      @media screen and (max-width: 300px), screen and (max-height: 500px) { @content; }
     }
 
     @else if $class == phone {

@@ -44,7 +44,7 @@ export default {
 @import '../scss/mixins.scss';
 
 .mobile-nav{
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -111,6 +111,7 @@ export default {
   margin-bottom: 5vh;
   font-weight: 700;
   opacity: .5;
+  
 }
 
 .navOpen{

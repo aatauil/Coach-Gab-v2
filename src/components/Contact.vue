@@ -83,6 +83,7 @@ export default {
 
         @include breakpoint(tablet-md){
    padding-bottom: 20vh;
+   margin-bottom: 55px;
   }
 
 }

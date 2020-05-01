@@ -73,6 +73,7 @@ export default {
     height: 100%;
     @include breakpoint(tablet-md){
     width: 100%;
+    margin-bottom: 55px;
   }
 }
 

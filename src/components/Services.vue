@@ -176,6 +176,9 @@ export default {
   background-color: rgb(238, 238, 238);
   position: relative;
   min-height: 600px;
+  @include breakpoint(tablet-sm){
+    margin-bottom: 55px;
+  }
 
 }
 

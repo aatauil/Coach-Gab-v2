@@ -152,6 +152,7 @@ export default {
     justify-content: flex-start;
     @include breakpoint(tablet-sm){
     height: auto;
+    margin-bottom: 55px;
     
   }
 
