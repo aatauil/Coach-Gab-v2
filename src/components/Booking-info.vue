@@ -127,6 +127,9 @@ export default {
     margin: 0;
     padding-left: 5%;
     padding-right: 5%;
+      @include breakpoint(phone-xs){
+    margin-bottom: 40px;
+  }
 }
 
 .ibooking-middle > .swiper-container > .swiper-wrapper{
@@ -137,6 +140,10 @@ export default {
     -webkit-transition-timing-function:linear!important;
     -o-transition-timing-function:linear!important;
     transition-timing-function:linear!important;
+
+          @include breakpoint(phone-xs){
+    margin-bottom: 30px;
+  }
 }
 
 .ibooking-container{
@@ -293,12 +300,18 @@ export default {
 
 .ibooking-item_title{
     font-size: 2rem;
+      @include breakpoint(phone-xs){
+    font-size: 3rem;
+  }
 }
 
 .ibooking-item_text{
     line-height: 150%;
     width: 95%;
     font-size: 1.2rem;
+      @include breakpoint(phone-xs){
+    font-size: 2rem;
+  }
 }
 
 .ibooking-bottom{
