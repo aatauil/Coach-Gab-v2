@@ -1,7 +1,7 @@
 <template>
   <section class="ibooking-container">
       <img class="ibooking-dots_1" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
-      <a href="#" class="next-button" >Booking</a>
+      <a href="#" class="next-button" >Booking info</a>
       <div class="ibooking-top">
         <article class="ibooking-header">
             <h1 class="ibooking-header_title">Booking<span class="red-text">.</span></h1>
@@ -127,7 +127,7 @@ export default {
     margin: 0;
     padding-left: 5%;
     padding-right: 5%;
-      @include breakpoint(phone-xs){
+      @include breakpoint(phone){
     margin-bottom: 40px;
   }
 }
@@ -141,7 +141,7 @@ export default {
     -o-transition-timing-function:linear!important;
     transition-timing-function:linear!important;
 
-          @include breakpoint(phone-xs){
+      @include breakpoint(phone){
     margin-bottom: 30px;
   }
 }
@@ -300,6 +300,10 @@ export default {
 
 .ibooking-item_title{
     font-size: 2rem;
+
+     @include breakpoint(phone){
+    font-size: 2.5rem;
+  }
       @include breakpoint(phone-xs){
     font-size: 3rem;
   }
@@ -309,6 +313,9 @@ export default {
     line-height: 150%;
     width: 95%;
     font-size: 1.2rem;
+         @include breakpoint(phone){
+    font-size: 1.8rem;
+  }
       @include breakpoint(phone-xs){
     font-size: 2rem;
   }
