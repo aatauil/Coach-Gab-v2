@@ -195,7 +195,7 @@ export default {
   width: 90%;
   padding-left: 10%;
 
-    @include breakpoint(height-sm){
+    @include breakpoint(tablet-sm){
   margin-bottom: 0;
   }
 }
@@ -238,7 +238,7 @@ export default {
   box-shadow: 0px 0px 30px rgba(128, 128, 128, 0.103);
   cursor: pointer;
 
-      @include breakpoint(height-sm){
+      @include breakpoint(tablet-sm){
       min-height: 400px;
       height: 80%;
       }
@@ -343,7 +343,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.096);
   }
 
-      @include breakpoint(height-sm){
+      @include breakpoint(tablet-sm){
       display: none;
       }
    
