@@ -156,8 +156,10 @@ export default {
     transform: translateY(10px);
     bottom: 0px;
     margin-left: 60px;
+    z-index: 1000;
     @include breakpoint(tablet-md){
     right: 0;
+    z-index: 1;
     }
 
       @include breakpoint(phone-xs){

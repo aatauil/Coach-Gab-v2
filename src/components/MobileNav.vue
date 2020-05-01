@@ -1,6 +1,9 @@
 <template>
   <nav class="mobile-nav" slot="pagination">
+     
       <div class="nav-collapse" :class="{navOpen:navOpen}"> 
+      <img class="nav-dots_1" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
+      <img class="nav-dots_2" src="../assets/icons/decoration/grid-dots3.svg" alt="grid dots">
       <router-link class="mobile-nav-item nav-home" to="/">Home</router-link>
       <router-link class="mobile-nav-item nav-services" to="/Services">Services</router-link>
       <router-link class="mobile-nav-item nav-booking-info" to="/Booking-info">Booking Info</router-link>
@@ -43,6 +46,8 @@ export default {
 .mobile-nav{
   z-index: 10;
   width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 .mobile-nav-bar{
@@ -105,6 +110,7 @@ export default {
   padding: 10px;
   margin-bottom: 5vh;
   font-weight: 700;
+  opacity: .5;
 }
 
 .navOpen{
@@ -114,6 +120,31 @@ export default {
   z-index: -1;
   transform: scale(1);
 
+}
+
+.active-link{
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  opacity: 1 !important;
+  
+}
+
+// Decoration 
+
+.nav-dots_1{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 70vw;
+  opacity: .1;
+}
+
+.nav-dots_2{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  opacity: .5;
 }
 
 

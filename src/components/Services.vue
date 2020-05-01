@@ -239,7 +239,8 @@ export default {
   cursor: pointer;
 
       @include breakpoint(height-sm){
-      min-height: 400px
+      min-height: 400px;
+      height: 80%;
       }
 
   
