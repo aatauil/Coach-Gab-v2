@@ -1,20 +1,40 @@
 <template> 
   <div id="app" class="main-container">
     <router-view class="router-view-container"></router-view>
-   <Navbar/>
+  <Navbar v-if="!mobileView" />
+  <MobileNav v-if="mobileView" />
   </div>
 </template>
 
 <script>
 //de13451d70a85ba978b65c812e188b2e312ab4ee
 
-import Navbar from "./components/MobileNav"
+import Navbar from "./components/NavBar.vue";
+import MobileNav from "./components/MobileNav";
+
 
 export default {
   name: 'MyIndex',
   components: {
-    Navbar
+    Navbar,
+    MobileNav
   },
+
+  data() {
+    return {
+      mobileView: true
+    }
+},
+  methods: {
+    handleView(){
+      this.mobileView = window.innerWidth <= 992;
+    }
+  },
+
+  created() {
+    this.handleView();
+    window.addEventListener("resize", this.handleView)
+  }
 
 }
 </script>

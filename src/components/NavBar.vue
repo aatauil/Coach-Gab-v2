@@ -26,12 +26,12 @@ export default {
   justify-content: space-between;
   bottom: 0;
   width: 100vw;
-  z-index: 100;
   height: 70px;
   display: flex;
   align-items: center;
   background-color: $color-dark;
   list-style-type: none;
+   z-index: 100000;
 
 }
 
@@ -61,7 +61,7 @@ export default {
   
 }
 
-.nav-home{
+.nav-list > .nav-home{
   margin-left: 5%;
 }
 

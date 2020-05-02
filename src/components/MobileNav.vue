@@ -44,7 +44,7 @@ export default {
 @import '../scss/mixins.scss';
 
 .mobile-nav{
-  z-index: 1000;
+  z-index: 100000;
   width: 100%;
   position: fixed;
   bottom: 0;

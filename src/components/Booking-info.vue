@@ -86,13 +86,21 @@ export default {
   data() {
       return {
         swiperOptions: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            loop: true,
-            grabCursor: true,
-            speed: 9000,
-            freeMode:true,
-            freeModeMomentumRatio: 10,
+          slidesPerView: 1,
+          loop: false,
+
+            breakpoints: {
+              400: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              loop: true,
+              grabCursor: true,
+              speed: 9000,
+              freeMode: true,
+              freeModeMomentumRatio: 10,
+
+                }
+            },
             
         // AutoPlay
             autoplay: {
@@ -129,6 +137,7 @@ export default {
     padding-right: 5%;
       @include breakpoint(phone){
     margin-bottom: 40px;
+    padding: 0;
   }
 }
 
@@ -166,8 +175,9 @@ export default {
     
   @include breakpoint(tablet-sm){
     flex-direction: column;
-    height: auto;
+    height: 60%;
   }
+
   
 }
 
@@ -179,13 +189,16 @@ export default {
     padding-left: 4vw;
       @include breakpoint(tablet-sm){
     width: auto;
-    padding-bottom: 20px;
+    padding: 5vh 4vw;
+    
   }
 }
 
 .ibooking-header_title{
     font-size: 4rem;
     margin: 3rem 0;
+
+
 }
 
 
@@ -205,6 +218,11 @@ export default {
         transform: translateY(90%);
 
     }
+
+     @include breakpoint(phone){
+      font-size: 1.7rem;  
+      width: 90%;
+  }
 }
 
 .ibooking-pay{
