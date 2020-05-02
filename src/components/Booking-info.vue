@@ -60,7 +60,8 @@
                 </swiper-slide>
                 
            </swiper>
-           
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
       </div>
      
       <div class="ibooking-bottom">
@@ -88,6 +89,11 @@ export default {
         swiperOptions: {
           slidesPerView: 1,
           loop: false,
+          centeredSlides: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
 
             breakpoints: {
               400: {
@@ -98,15 +104,15 @@ export default {
               speed: 9000,
               freeMode: true,
               freeModeMomentumRatio: 10,
+              autoplay: {
+                delay: 1
+              }
 
                 }
             },
             
         // AutoPlay
-            autoplay: {
-                delay: 1,
-
-            }
+            autoplay: false
 
         }
       }
@@ -139,6 +145,25 @@ export default {
     margin-bottom: 40px;
     padding: 0;
   }
+}
+
+.ibooking-middle > .swiper-button-next, .ibooking-middle > .swiper-button-prev{
+  color: black;
+  margin-top: 25%;
+  --swiper-navigation-size: 20px;
+  display: none;
+  background-color: rgba(128, 128, 128, 0.075);
+  padding: 5px 10px;
+  border-radius: 5px;
+
+
+      @include breakpoint(phone){
+    display: block;
+  }
+  
+
+
+  
 }
 
 .ibooking-middle > .swiper-container > .swiper-wrapper{
@@ -175,7 +200,7 @@ export default {
     
   @include breakpoint(tablet-sm){
     flex-direction: column;
-    height: 60%;
+    height: auto;
   }
 
   
@@ -233,7 +258,8 @@ export default {
     background-color: #EFEFEF;
 
       @include breakpoint(tablet-sm){
-    padding-bottom: 30px;
+    padding: 2vh 0 5vh 4vw;
+    margin-bottom: 30px;
   }
   
 
@@ -347,7 +373,7 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
 
-     @include breakpoint(phone){
+     @include breakpoint(tablet-sm){
     display: none;
   }
 
