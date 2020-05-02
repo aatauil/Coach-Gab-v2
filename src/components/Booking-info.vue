@@ -144,7 +144,7 @@ export default {
       @include breakpoint(phone){
     margin-bottom: 40px;
     padding: 0;
-    height: 80vh;
+    height: auto;
   }
 }
 
@@ -333,6 +333,10 @@ export default {
     min-height: 250px;
      &:hover{
          box-shadow: 0px 0px 50px rgb(177, 177, 177);
+    }
+
+    @include breakpoint(tablet-md){
+      height: auto;
     }
     
 }
