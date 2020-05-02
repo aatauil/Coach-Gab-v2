@@ -144,6 +144,7 @@ export default {
       @include breakpoint(phone){
     margin-bottom: 40px;
     padding: 0;
+    height: 80vh;
   }
 }
 
@@ -174,10 +175,6 @@ export default {
     -webkit-transition-timing-function:linear!important;
     -o-transition-timing-function:linear!important;
     transition-timing-function:linear!important;
-
-      @include breakpoint(phone){
-    margin-bottom: 30px;
-  }
 }
 
 .ibooking-container{
@@ -187,6 +184,7 @@ export default {
     @include breakpoint(tablet-sm){
     height: auto;
     margin-bottom: 55px;
+    position: relative;
     
   }
 
@@ -336,6 +334,7 @@ export default {
      &:hover{
          box-shadow: 0px 0px 50px rgb(177, 177, 177);
     }
+    
 }
 
 .ibooking-item_icon{
@@ -373,7 +372,7 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
 
-     @include breakpoint(tablet-sm){
+     @include breakpoint(tablet-md){
     display: none;
   }
 

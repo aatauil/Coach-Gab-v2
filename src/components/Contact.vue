@@ -108,6 +108,7 @@ textarea {
     max-width: 1300px;
         @include breakpoint(tablet-md){
     flex-direction: column;
+    margin-bottom: 55px;
   }
 
 
