@@ -5,19 +5,23 @@
   // Width
 
     @if $class == phone-xs {
-      @media screen and (max-width: 300px), screen and (max-height: 500px) { @content; }
+      @media screen and (max-width: 340px), screen and (max-height: 500px) { @content; }
     }
 
     @else if $class == phone {
-      @media (max-width: 400px) { @content; }
+      @media (max-width: 500px) { @content; }
     }
    
     @else if $class == tablet-sm {
-      @media screen and (max-width: 768px), screen and (max-height: 700px) { @content; }
+      @media screen and (max-width: 768px), screen and (max-height: 500px) { @content; }
     }
    
     @else if $class == tablet-md {
-      @media (max-width: 992px) { @content; }
+      @media  screen and (max-width: 992px), screen and (max-height: 700px) { @content; }
+    }
+
+    @else if $class == tablet-md-height {
+      @media  screen and (max-height: 700px) { @content; }
     }
    
     @else if $class == desktop {

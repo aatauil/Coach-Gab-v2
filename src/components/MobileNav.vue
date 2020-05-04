@@ -101,16 +101,24 @@ export default {
   padding: 50px;
   box-sizing: border-box;
   justify-content: center;
+  @include breakpoint(tablet-sm){
+    padding: 10px;
+  }
+  
 }
 
 .mobile-nav-item{
   color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   text-decoration: none;
   padding: 10px;
   margin-bottom: 5vh;
   font-weight: 700;
   opacity: .5;
+
+    @include breakpoint(tablet-sm){
+      font-size: 2.5rem;
+    }
   
 }
 

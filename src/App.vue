@@ -1,6 +1,8 @@
 <template> 
   <div id="app" class="main-container">
+    <transition>
     <router-view class="router-view-container"></router-view>
+    </transition>
   <Navbar v-if="!mobileView" />
   <MobileNav v-if="mobileView" />
   </div>
@@ -49,16 +51,7 @@ html{
   font-size: 62.5%;
   width: 100%;
   height: 100%;
-  
 
-
-  @include breakpoint(tablet-md){
-    font-size: 55%;
-  }
-  
-    @include breakpoint(phone){
-    font-size: 35%;
-  }
 }
 
 body{
@@ -75,8 +68,11 @@ body{
   display: flex;
   flex-direction: column;
   height: 100vh;
-    @include breakpoint(tablet-sm){
-    width: auto;
+    @include breakpoint(tablet-md){
+    width: 100vw;
+    height: auto;
+    flex: 1;
+    min-height: calc(100vh - 55px);
   }
   
   

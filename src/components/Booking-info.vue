@@ -27,7 +27,7 @@
       </div>
       <div class="ibooking-middle">
            <img class="ibooking-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
-           <swiper ref="mySwiper" :options="swiperOptions">
+           <swiper class="ibooking-item-wrapper" ref="mySwiper" :options="swiperOptions">
                 <swiper-slide class="ibooking-item">
                     <img class="ibooking-item_icon" src="../assets/icons/appointment.svg" alt="appointment icon">
                     <h3 class="ibooking-item_title">Book and Pay <span class="red-text">Online!</span></h3>
@@ -60,8 +60,38 @@
                 </swiper-slide>
                 
            </swiper>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+           <div class="ibooking-item-wrapper-mobile">
+             <div class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/appointment.svg" alt="appointment icon">
+                    <h3 class="ibooking-item_title">Book and Pay <span class="red-text">Online!</span></h3>
+                    <p class="ibooking-item_text">Easily book and pay online! 5 minutes is all you need. We provide many payement methodes and even the possibility to pay cash. Book now!</p>
+                </div>
+                 <div class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/notification-fill.svg" alt="notification icon">
+                    <h3 class="ibooking-item_title">E-mail Reminder </h3>
+                    <p class="ibooking-item_text">Get an E-mail reminder <b>2 hours</b>  in advance. This way you will never miss a workout. Rather get a text message? No problem we got you covered!</p>
+                </div>
+                 <div class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/list.svg" alt="list icon">
+                    <h3 class="ibooking-item_title">Multi-Session <span class="red-text">Pass </span></h3>
+                    <p class="ibooking-item_text">Buy 10 sessions for a lower price. Book whenever you want and for as long as you need. The pass stays valid for <b>1 year</b> . Easily track how many sessions you have left with our user dashboard. </p>
+                </div>
+                 <div class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="">
+                    <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
+                    <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
+                </div>
+                  <div class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/cancel-fill.svg" alt="cancel icon">
+                    <h3 class="ibooking-item_title"><span class="red-text">Free  </span>Cancelation </h3>
+                    <p class="ibooking-item_text">You suddenly get called by the boss? He tells you you have to work tomorrow but you already have a session with Gab? Easily cancel your sessions for free if you do it <b>24 hours</b>  in advance!</p>
+                </div>
+                  <div class="ibooking-item">
+                    <img class="ibooking-item_icon" src="../assets/icons/cash.svg" alt="cash icon">
+                    <h3 class="ibooking-item_title"><span class="red-text">Cash  </span>Payement Possible </h3>
+                    <p class="ibooking-item_text">When booking choose the cash option. This will skip the online payement. On the day of the session be sure to paye the coach <b>before</b> the session starts.</p>
+                </div>
+           </div>
       </div>
      
       <div class="ibooking-bottom">
@@ -87,32 +117,17 @@ export default {
   data() {
       return {
         swiperOptions: {
-          slidesPerView: 1,
-          loop: false,
-          centeredSlides: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-
-            breakpoints: {
-              400: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-              loop: true,
-              grabCursor: true,
-              speed: 9000,
-              freeMode: true,
-              freeModeMomentumRatio: 10,
-              autoplay: {
-                delay: 1
-              }
-
-                }
-            },
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          centeredSlides: false,
+          speed: 7000,
+          grabCursor: true,
             
         // AutoPlay
-            autoplay: false
+            autoplay: {
+              delay: 0
+            }
 
         }
       }
@@ -137,14 +152,13 @@ export default {
 @import '../scss/mixins.scss';
 
 .ibooking-middle >.swiper-container{
-    height: 100%;
+    height: auto;
     margin: 0;
     padding-left: 5%;
     padding-right: 5%;
-      @include breakpoint(phone){
-    margin-bottom: 40px;
-    padding: 0;
-    height: auto;
+      @include breakpoint(tablet-md){
+        padding: 50px 0px;
+
   }
 }
 
@@ -159,7 +173,7 @@ export default {
 
 
       @include breakpoint(phone){
-    display: block;
+
   }
   
 
@@ -171,21 +185,18 @@ export default {
     margin-top: 0 !important;
     display: flex;
     align-items: center;
-    padding: 5px;
     -webkit-transition-timing-function:linear!important;
     -o-transition-timing-function:linear!important;
     transition-timing-function:linear!important;
+    padding: 50px 0px;
 }
 
 .ibooking-container{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    @include breakpoint(tablet-sm){
-    height: auto;
-    margin-bottom: 55px;
-    position: relative;
-    
+    @include breakpoint(tablet-md){
+      margin-bottom: 55px;
   }
 
 }
@@ -196,9 +207,8 @@ export default {
     height: 40%;
     
     
-  @include breakpoint(tablet-sm){
+  @include breakpoint(tablet-md){
     flex-direction: column;
-    height: auto;
   }
 
   
@@ -210,16 +220,19 @@ export default {
     background-color: #1E1E1E;
     padding-top: 20px;
     padding-left: 4vw;
-      @include breakpoint(tablet-sm){
-    width: auto;
-    padding: 5vh 4vw;
-    
+      @include breakpoint(tablet-md){
+        min-height: 300px;
+        width: 100%;
+        box-sizing: border-box;
   }
 }
 
 .ibooking-header_title{
     font-size: 4rem;
     margin: 3rem 0;
+    @include breakpoint(tablet-md){
+      font-size: 3rem;
+    }
 
 
 }
@@ -242,9 +255,9 @@ export default {
 
     }
 
-     @include breakpoint(phone){
-      font-size: 1.7rem;  
-      width: 90%;
+     @include breakpoint(tablet-md){
+       font-size: 1.3rem;
+
   }
 }
 
@@ -255,9 +268,9 @@ export default {
     flex: 1;
     background-color: #EFEFEF;
 
-      @include breakpoint(tablet-sm){
-    padding: 2vh 0 5vh 4vw;
-    margin-bottom: 30px;
+      @include breakpoint(tablet-md){
+         padding-bottom: 30px;
+         padding-top: 0px;
   }
   
 
@@ -267,13 +280,16 @@ export default {
 .ibooking-pay_title{
     margin: 3rem 0;
     font-size: 4rem;
+    @include breakpoint(tablet-md){
+      font-size: 3rem;
+    }    
 }
 
 .ibooking-pay_list{
     width: 70%;
 
       @include breakpoint(tablet-sm){
-    width: 90%;
+        width: 90%;
   }
   
 }
@@ -303,7 +319,8 @@ export default {
         opacity: .8;
     }
     @include breakpoint(phone){
-    font-size: 1.4rem;
+      font-size: .9rem;
+
   }
 
 }
@@ -319,6 +336,9 @@ export default {
     display: flex;
     align-items: center;
     min-height: 300px;
+     @include breakpoint(tablet-md){
+       padding: 20px 0px;
+     }
 }
 
 
@@ -326,17 +346,21 @@ export default {
     transition: box-shadow .2s ease;
     box-sizing: border-box;
     box-shadow: 0px 0px 20px rgb(223, 223, 223);
-    height: 65%;
+    min-height: 300px;
     min-width: 300px;
     padding: 20px;
     background-color: white;
-    min-height: 250px;
      &:hover{
          box-shadow: 0px 0px 50px rgb(177, 177, 177);
     }
 
     @include breakpoint(tablet-md){
-      height: auto;
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(phone-xs){
+      min-width: auto;
     }
     
 }
@@ -350,10 +374,7 @@ export default {
     font-size: 2rem;
 
      @include breakpoint(phone){
-    font-size: 2.5rem;
-  }
-      @include breakpoint(phone-xs){
-    font-size: 3rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -361,11 +382,22 @@ export default {
     line-height: 150%;
     width: 95%;
     font-size: 1.2rem;
-         @include breakpoint(phone){
-    font-size: 1.8rem;
-  }
-      @include breakpoint(phone-xs){
-    font-size: 2rem;
+}
+
+.ibooking-item-wrapper{
+   @include breakpoint(tablet-sm){
+     display: none;
+   }
+  
+}
+
+.ibooking-item-wrapper-mobile{
+  display: none;
+  @include breakpoint(tablet-sm){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
   }
 }
 
@@ -374,16 +406,17 @@ export default {
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 
      @include breakpoint(tablet-md){
-    display: none;
+
   }
 
 }
 
 .ibooking-bottom_inner{
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .misc-item{
@@ -397,9 +430,19 @@ export default {
     font-weight: 700;
     border-radius: 5px;
     margin: 0px 5px;
+    margin-bottom: 10px;
+    white-space: nowrap;
     &:hover{
         opacity: 1;
     }
+
+     @include breakpoint(tablet-sm){
+      width: 70%;
+      opacity: 1;
+     }
+     
+
+
     
 }
 // Tooltip 

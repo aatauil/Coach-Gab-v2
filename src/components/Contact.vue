@@ -82,7 +82,6 @@ export default {
     background-color: #F9F9F9;
 
         @include breakpoint(tablet-md){
-   padding-bottom: 20vh;
    margin-bottom: 55px;
   }
 

@@ -56,6 +56,9 @@ export default {
     text-orientation: mixed;
     color: rgba(255, 255, 255, 0.445);
     font-size: 1.6rem;
+    @include breakpoint(tablet-md){
+        font-size: 1.3rem;
+    }
 }
 
 .home-wrapper{
@@ -71,10 +74,6 @@ export default {
 .container{
     width: 50%;
     height: 100%;
-    @include breakpoint(tablet-md){
-    width: 100%;
-    margin-bottom: 55px;
-  }
 }
 
 .container-1{
@@ -84,6 +83,10 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
+    @include breakpoint(tablet-md){
+        width: 100%;
+        min-height: calc(100vh - 55px);
+    }
 }
 
 .main-title{
@@ -94,6 +97,20 @@ export default {
     margin-left: 10%;
     line-height: 90%;
     z-index: 1;
+
+     @include breakpoint(tablet-md){
+         transform: translateY(-10%);
+     }
+
+     @include breakpoint(phone){
+        font-size: 5.5rem;
+        margin-left: 5%;
+     }
+
+        @include breakpoint(phone-xs){
+    font-size: 3rem;
+     }
+     
 }
 
 .color-black{
@@ -107,6 +124,14 @@ export default {
     color: rgba(255, 255, 255, 0.459);
     font-size: 1.6rem;
     width: 100%;
+    @include breakpoint(tablet-md){
+        width: 70%;
+    }
+     @include breakpoint(tablet-sm){
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1.3rem;
+    }
 }
 
 .column{
@@ -116,8 +141,8 @@ export default {
 .container-2{
     position: relative;
     @include breakpoint(tablet-md){
-    display: none;
-  }
+          display: none;
+      }
     
 }
 .booking-btn{
@@ -133,6 +158,14 @@ export default {
     font-weight: 700;
     font-size: 1.8rem;
     z-index: 1;
+         @include breakpoint(tablet-md){
+         transform: translateY(-10%);
+     }
+
+       @include breakpoint(phone){
+           font-size: 1.5rem;
+           margin-left: 5%;
+       }
 }
 
 .booking-btn::after{
@@ -152,6 +185,7 @@ export default {
 }
 
 
+
 .hero-img-container{
     position: absolute;
     transform: translateY(10px);
@@ -163,9 +197,6 @@ export default {
     z-index: 1;
     }
 
-      @include breakpoint(phone-xs){
-    display: none;
-    }
 
   
 }
@@ -178,7 +209,6 @@ export default {
     width: 40vh;
   }
 }
-
 
 .next-button{
     position: absolute;
@@ -200,9 +230,12 @@ export default {
     &:hover{
         opacity: 1;
     }
-    @include breakpoint(tablet-sm){
-    opacity: 1;
-    padding: 10px 5%;
+
+    @include breakpoint(tablet-md){
+        opacity: 1;
+    }
+      @include breakpoint(tablet-sm){
+    display: none;
   }
 }
 
@@ -304,9 +337,6 @@ export default {
     top: 30px;
     left: 0;
 
-    @include breakpoint(tablet-sm){
-    height: 50%;
-  }
 
 }
 

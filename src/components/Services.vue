@@ -176,7 +176,8 @@ export default {
   background-color: rgb(238, 238, 238);
   position: relative;
   min-height: 600px;
-  @include breakpoint(tablet-sm){
+
+  @include breakpoint(tablet-md-height){
     margin-bottom: 55px;
   }
 
@@ -188,19 +189,29 @@ export default {
   display: none;
   color: black;
   @include breakpoint(tablet-md){
-  display: block;
-}
+    display: block;
+  }
 }
 
 
 .service-title{
+box-sizing: content-box;
   font-size: 6rem;
   width: 90%;
   padding-left: 10%;
+  @include breakpoint(tablet-md){
+    font-size: 5rem;
+    box-sizing: border-box;
+  }
 
     @include breakpoint(tablet-sm){
-  margin-bottom: 0;
+    padding-left: 0;
   }
+
+  @include breakpoint(phone-xs){
+    font-size: 4rem;
+  }
+
 }
 
 .swiper-container{
@@ -216,9 +227,11 @@ export default {
 }
 
 .swiper-wrapper{
-  max-width: 100vw;
-  margin: auto;
   margin-top: 50px;
+
+  @include breakpoint(tablet-md-height){
+    margin-top: 0px;
+  }
 
 }
 
@@ -237,14 +250,22 @@ export default {
   height: 65%;
   padding: 5px;
   width: 320px;
+  min-height: 450px;
   max-width: 350px;
   box-shadow: 0px 0px 30px rgba(128, 128, 128, 0.103);
   cursor: pointer;
 
-      @include breakpoint(tablet-sm){
-      min-height: 400px;
-      height: 80%;
-      }
+  @include breakpoint(tablet-md){
+  min-height: 450px;
+  height: 100%;
+  }
+
+  @include breakpoint(phone-xs){
+    width: 90%;
+  }
+
+  
+
 
   
 }
@@ -270,7 +291,7 @@ export default {
   padding: 20px 15px;
   font-size: 2rem;
     @include breakpoint(tablet-md){
-  font-size: 16px;
+  font-size: 1.8rem;
 }
 }
 
@@ -280,7 +301,7 @@ export default {
   width: 90%;
   line-height: 150%;
       @include breakpoint(tablet-md){
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 }
 
@@ -346,10 +367,9 @@ export default {
     background-color: rgba(0, 0, 0, 0.096);
   }
 
-      @include breakpoint(tablet-sm){
-      display: none;
+      @include breakpoint(tablet-md){
+        display: none;
       }
-   
 }
 .swiper-pagination-bullet{
   position: relative;
