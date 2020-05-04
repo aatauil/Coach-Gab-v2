@@ -98,6 +98,15 @@ textarea {
   width: 90%;
   padding-left: 10%;
   margin-bottom: 0px;
+
+    @include breakpoint(tablet-md){
+    font-size: 5rem;
+    box-sizing: border-box;
+  }
+
+  @include breakpoint(phone-xs){
+    font-size: 4rem;
+  }
 }
 
 .contact-form{
@@ -108,6 +117,7 @@ textarea {
         @include breakpoint(tablet-md){
     flex-direction: column;
     margin-bottom: 55px;
+    z-index: 100;
   }
 
 
@@ -275,6 +285,10 @@ textarea {
     font-size: 2rem;
     font-weight: 700;
 
+     @include breakpoint(tablet-md){
+         margin-bottom: 30px;
+     }
+
 }
 
 // Decoration
@@ -284,9 +298,7 @@ textarea {
   left: 0;
   top: 10%;
   width: 100px;
-          @include breakpoint(tablet-md){
-    z-index: -1;
-  }
+
 }
 
 .grid-dots_2{
@@ -294,9 +306,7 @@ textarea {
   right: 10px;
   bottom: 8%;
   width: 100px;
-    @include breakpoint(tablet-md){
-    z-index: -1;
-  }
+
 }
 
 
