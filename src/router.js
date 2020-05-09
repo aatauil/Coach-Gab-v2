@@ -28,6 +28,10 @@ export default new Router({
             name: "Contact",
             component: () => import(/* webpackChunkName: "Contact" */ "./components/Contact.vue")
         },
-
+        {
+        path: "/*",
+        name: "404",
+        component: () => import(/* webpackChunkName: "Contact" */ "./components/404.vue")
+        },
     ]
 })
