@@ -20,7 +20,7 @@ export default new Router({
         },
         {
             path: "/Booking-info",
-            name: "Bookinf-info",
+            name: "Booking-info",
             component: () => import(/* webpackChunkName: "Booking-info" */ "./components/Booking-info.vue")
         },
         {
