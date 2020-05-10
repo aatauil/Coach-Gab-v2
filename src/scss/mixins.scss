@@ -21,7 +21,7 @@
     }
 
     @else if $class == tablet-md-height {
-      @media  screen and (max-height: 700px) { @content; }
+      @media  screen and (max-height: 750px) { @content; }
     }
    
     @else if $class == desktop {

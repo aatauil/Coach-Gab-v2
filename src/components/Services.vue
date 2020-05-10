@@ -178,9 +178,6 @@ export default {
   position: relative;
   min-height: 600px;
 
-  @include breakpoint(tablet-md-height){
-    margin-bottom: 55px;
-  }
 
 }
 

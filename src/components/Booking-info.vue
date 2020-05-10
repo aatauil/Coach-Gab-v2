@@ -187,9 +187,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    @include breakpoint(tablet-md){
-      margin-bottom: 55px;
-  }
 
 }
 
@@ -201,6 +198,7 @@ export default {
     
   @include breakpoint(tablet-md){
     flex-direction: column;
+        height: auto;
   }
 
   
@@ -260,6 +258,7 @@ export default {
     flex: 1;
     background-color: #EFEFEF;
 
+
       @include breakpoint(tablet-md){
          padding-bottom: 30px;
          padding-top: 0px;
@@ -279,8 +278,8 @@ export default {
 
 .ibooking-pay_list{
     width: 70%;
-
-      @include breakpoint(tablet-sm){
+    
+      @include breakpoint(tablet-md){
         width: 90%;
   }
   
@@ -330,6 +329,7 @@ export default {
     min-height: 300px;
      @include breakpoint(tablet-md){
        padding: 20px 0px;
+       min-height: auto;
      }
 }
 

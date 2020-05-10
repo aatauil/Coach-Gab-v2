@@ -54,11 +54,6 @@ html{
 
 }
 
-body{
-  max-width: 100vw;
-  max-height: 100vh;
-}
-
 .router-view-container{
   height: 100%;
   flex: 1;
@@ -70,9 +65,8 @@ body{
   height: 100vh;
     @include breakpoint(tablet-md){
     width: 100vw;
-    height: auto;
     flex: 1;
-    min-height: calc(100vh - 55px);
+    min-height: 100vh;
   }
   
   
@@ -85,6 +79,12 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $color-dark;
+
+  @include breakpoint(tablet-md){
+    margin-bottom: 55px;
+    height: auto;
+  }
+
 
 }
 

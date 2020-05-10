@@ -81,10 +81,6 @@ export default {
     flex-direction: column;
     background-color: #F9F9F9;
 
-        @include breakpoint(tablet-md){
-   margin-bottom: 55px;
-  }
-
 }
 
 textarea {

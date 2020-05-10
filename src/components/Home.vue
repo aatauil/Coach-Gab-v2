@@ -85,7 +85,7 @@ export default {
     align-items: flex-start;
     @include breakpoint(tablet-md){
         width: 100%;
-        min-height: calc(100vh - 55px);
+        height: 100vh;
     }
 }
 
