@@ -4,7 +4,7 @@
     <img class="grid-dots_1" src="../assets/icons/decoration/grid-dots1.svg" alt="grid dots">
     <img class="grid-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="grid dots">
      <router-link class="next-button" to="/Booking-info">Booking info</router-link>
-      <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper ref="serviceSwiper" :options="serviceOptions">
         <!-- Slide 1 -->
         <swiper-slide class="service-item">
           <div class="service-item_info">
@@ -113,12 +113,13 @@ export default {
   },
  data() {
       return {
-        swiperOptions: {
+        serviceOptions: {
           effect: 'coverflow',
           centeredSlides: true,
           slidesPerView: 'auto',
           slideToClickedSlide: true,
           initialSlide: 1,
+    
           coverflowEffect: {
             slideShadows: true,
             rotate: 0,
@@ -151,7 +152,7 @@ export default {
     },
     computed: {
       swiper() {
-        return this.$refs.mySwiper.$swiper
+        return this.$refs.serviceSwiper.$swiper
       }
     },
     mounted() {
@@ -199,6 +200,7 @@ box-sizing: content-box;
   font-size: 6rem;
   width: 90%;
   padding-left: 10%;
+  margin-bottom: 0;
   @include breakpoint(tablet-md){
     font-size: 5rem;
     box-sizing: border-box;
@@ -214,7 +216,7 @@ box-sizing: content-box;
 
 }
 
-.swiper-container{
+.service-container >.swiper-container{
   display: flex;
   justify-content: center;
   align-content: center;

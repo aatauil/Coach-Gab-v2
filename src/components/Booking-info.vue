@@ -27,7 +27,7 @@
       </div>
       <div class="ibooking-middle">
            <img class="ibooking-dots_2" src="../assets/icons/decoration/grid-dots2.svg" alt="dots">
-           <swiper class="ibooking-item-wrapper" ref="mySwiper" :options="swiperOptions">
+           <swiper class="ibooking-item-wrapper" ref="bookingSwiper" :options="bookingOptions" :auto-update="true" :auto-destroy="false">
                 <swiper-slide class="ibooking-item">
                     <img class="ibooking-item_icon" src="../assets/icons/appointment.svg" alt="appointment icon">
                     <h3 class="ibooking-item_title">Book and Pay <span class="red-text">Online!</span></h3>
@@ -116,13 +116,14 @@ export default {
   },
   data() {
       return {
-        swiperOptions: {
+        bookingOptions: {
           slidesPerView: 3,
           spaceBetween: 30,
           loop: true,
           centeredSlides: false,
           speed: 7000,
           grabCursor: true,
+          animating: true,
             
         // AutoPlay
             autoplay: {
@@ -137,7 +138,7 @@ export default {
     },
     computed: {
       swiper() {
-        return this.$refs.mySwiper.$swiper
+        return this.$refs.bookingSwiper.$swiper
       }
     },
     mounted() {
@@ -170,15 +171,6 @@ export default {
   background-color: rgba(128, 128, 128, 0.075);
   padding: 5px 10px;
   border-radius: 5px;
-
-
-      @include breakpoint(phone){
-
-  }
-  
-
-
-  
 }
 
 .ibooking-middle > .swiper-container > .swiper-wrapper{
