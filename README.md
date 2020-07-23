@@ -1,5 +1,9 @@
 # newgab
 
+Link to preview website 
+
+https://wonderful-golick-9d4ef3.netlify.app/
+
 ## Project setup
 ```
 npm install
